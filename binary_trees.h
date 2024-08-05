@@ -45,7 +45,7 @@ void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
 /* P0T8 */
 
 /* P0T9 */
-
+size_t binary_tree_height(const binary_tree_t *tree);
 /* P0T10 */
 
 /* P0T11 */
