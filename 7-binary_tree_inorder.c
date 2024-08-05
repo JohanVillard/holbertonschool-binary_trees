@@ -10,8 +10,15 @@
  */
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
-	binary_tree_t *current_node = tree;
+	const binary_tree_t *current_node = tree;
 
-	while (current_node->left != NULL)	/* Search for left leaf */
+	if (current_node == NULL)	/* Base case */
+		return;
+
+	while (current_node->left != NULL)	/* Search for left leaf at max height*/
 		current_node = current_node->left;
+
+	return (binary_tree_inorder(current_node->left, current_node->left->n));
+	return (binary_tree_inorder(current_node, current_node->n));
+	return (binary_tree_inorder(current_node->right, current_node->right->n));
 }
