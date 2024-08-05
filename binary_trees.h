@@ -34,7 +34,7 @@ void binary_tree_delete(binary_tree_t *tree);
 /* P0T4 */
 
 /* P0T5 */
-
+int binary_tree_is_root(const binary_tree_t *node);
 /* P0T6 */
 
 /* P0T7 */
