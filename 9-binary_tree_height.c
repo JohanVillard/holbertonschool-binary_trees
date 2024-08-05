@@ -9,7 +9,7 @@
 size_t binary_tree_height(const binary_tree_t *tree)
 {
 	const binary_tree_t *current_node = tree;
-	int left_height = 0, right_height = 0;
+	size_t left_height = 0, right_height = 0;
 
 	/* Case base */
 	/* If node or his choildren are don't exist, stop the count */
