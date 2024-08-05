@@ -10,5 +10,8 @@
  */
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
+	binary_tree_t *current_node = tree;
 
+	while (current_node->left != NULL)	/* Search for left leaf */
+		current_node = current_node->left;
 }
