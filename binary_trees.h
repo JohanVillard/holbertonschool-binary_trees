@@ -3,7 +3,6 @@
 
 #include <stddef.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 /* -----------------------STRUCTURE----------------------- */
 
@@ -25,9 +24,11 @@ typedef struct binary_tree_s
 
 /* ----------------------FUNCTIONS------------------------ */
 
+
 void binary_tree_print(const binary_tree_t *);
 /* P0T0 */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
 /* P0T1 */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 /* P0T2 */
