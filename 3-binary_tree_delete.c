@@ -11,7 +11,7 @@ void binary_tree_delete(binary_tree_t *tree)
 	/* Get the current node pointed to by the pointer returned by the function */
 	binary_tree_t *current_node = tree;
 
-	if (current_node == NULL)	/* Base case. Stop the recursion */
+	if (tree == NULL)	/* Base case. Stop the recursion */
 		return;
 
 	/* First, runs along the left tree */
