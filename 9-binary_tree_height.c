@@ -11,15 +11,17 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	const binary_tree_t *current_node = tree;
 	int left_height = 0, right_height = 0;
 
-	if (current_node == NULL)
+	/* Case base */
+	/* If node or his choildren are don't exist, stop the count */
+	if (current_node == NULL ||
+		(current_node->left == NULL && current_node->right == NULL))
 		return (0);
 
-	/* Nedd to find the longest path */
+	/* Need to find the longest path */
 	left_height = binary_tree_height(current_node->left);
 	right_height = binary_tree_height(current_node->right);
 
 	/* Height(A) = 1 + max(Height(Aleft), Height(Aright)) */
-
 	if (left_height > right_height)
 		return (left_height + 1);
 	else
