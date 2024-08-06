@@ -13,7 +13,7 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 	if (node->parent == NULL || node == NULL)
 		return (NULL);
 
-	/* Check if parent has one child */
+	/* Check if parent has one child - no sibling */
 	if (node->parent->right == NULL || node->parent->left == NULL)
 		return (NULL);
 
