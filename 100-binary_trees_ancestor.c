@@ -10,23 +10,26 @@
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 const binary_tree_t *second)
 {
-	if (first == NULL || second == NULL)	/* No common ancestor */
-		return (NULL);
+	/* Use alignment method */
+	/* Pointers traverse equal distances from their initial position */
+	/* to the LCA */
+	/* Allows to reset f and s to initial position */
+	const binary_tree_t *f = first;
+	const binary_tree_t *s = second;
 
-	if (first == second->parent)	/* Base case */
-		return (second->parent);
+	/* Search same parent */
+	while (f != s)
+	{
+		if (f == NULL)	/* When at root */
+			f = second;	/* Reset pointer to second's origin */
+		else
+			f = f->parent;	/* run in first ascendance */
 
-	if (first->parent == second)	/* Base case */
-		return (first->parent);
-
-	if (first->parent == second->parent)	/* Base case */
-		return (first->parent);
-
-	if (first->parent != second->parent)	/* Run into second ancestors */
-		return (binary_trees_ancestor(first, second->parent));
-
-	if (first->parent != second->parent)	/* Run into first ancestors */
-		return (binary_trees_ancestor(first->parent, second));
-
-	return (NULL);
+		if (s == NULL)	/* When at root */
+			s = first;	/* Reset pointer to first's origin */
+		else
+			s = s->parent;	/* run in second ascendance */
+	}
+	/* Return first or second parent(same) or return NULL if not find */
+	return ((binary_tree_t *)f);
 }
