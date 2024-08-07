@@ -15,10 +15,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	}
 
 	/* Calculate the height of tree->left with recursive */
-	hg_left = binary_tree_height(tree->left);
+	hg_left = _binary_tree_height(tree->left);
 
 	/* Calculate the height of tree->right with recursive */
-	hg_right = binary_tree_height(tree->right);
+	hg_right = _binary_tree_height(tree->right);
 
 	if (hg_left != hg_right)
 	{
