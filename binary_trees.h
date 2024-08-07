@@ -68,5 +68,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 /* P0T19 */
 binary_tree_t *binary_trees_ancestor
 (const binary_tree_t *first, const binary_tree_t *second);
+/* P0T20 */
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
 #endif /* _BINARY_TREES_H_ */

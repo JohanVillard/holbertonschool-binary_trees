@@ -22,7 +22,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	right_height = binary_tree_height(tree->right);
 
 	/* Height(A) = 1 + max(Height(Aleft), Height(Aright)) */
-	/* Add 1(=root) to the longest tree */
+	/* Add 1 to the longest tree */
 	if (left_height > right_height)
 		return (left_height + 1);
 	else
