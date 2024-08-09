@@ -56,7 +56,7 @@ size_t _binary_tree_height(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-    /* If tree is a leaf - differ to Task 9 */
+	/* If tree is a leaf - differ to Task 9 */
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
 
@@ -72,6 +72,3 @@ size_t _binary_tree_height(const binary_tree_t *tree)
 	else
 		return (right_height + 1);
 }
-
-
-
